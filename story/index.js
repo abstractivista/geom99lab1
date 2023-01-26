@@ -6,6 +6,7 @@ function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 9,
     center: kauai,
+    mapTypeId: 'satellite'
   });
   // The marker, positioned at Kauai
   const marker = new google.maps.Marker({
