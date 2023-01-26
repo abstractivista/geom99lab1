@@ -5,11 +5,11 @@ function initMap() {
   // The map, centered at Kauai
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 4,
-    center: Kauai,
+    center: kauai,
   });
   // The marker, positioned at Kauai
   const marker = new google.maps.Marker({
-    position: Kauai,
+    position: kauai,
     map: map,
   });
 }
