@@ -4,7 +4,7 @@ function initMap() {
   const kauai = { lat: 22.058, lng: -159.579 };
   // The map, centered at Kauai
   const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 14,
+    zoom: 9,
     center: kauai,
   });
   // The marker, positioned at Kauai
