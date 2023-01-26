@@ -39,5 +39,38 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap&v=weekly"
       defer
     ></script>
-  </body>
+	  <script type="text/javascript">
+    var locations = [
+       [ 'Hanalei Wildlife Refuge', 22.1999637,-159.4694653 ]
+   ,[ 'Poipu Beach', 21.8731483,-159.455060 ]
+  ,[ 'Kilauea Lighthouse',22.2316946,-159.4019598 ]
+  , [ 'Waialeale', 22.0706509,-159.5136368 ]
+    ];
+    
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 10,
+      center: new google.maps.LatLng(22.058, -159.579),
+      mapTypeId: google.maps.MapTypeId.SATELLITE
+    });
+    
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+    
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+      
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+  </script>
+</body>
 </html>
+
