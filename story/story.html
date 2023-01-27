@@ -14,15 +14,12 @@
   width: 100%; /* The width is the width of the web page */
 }
         h3 {
-            font-size: 1.5rem;
+            font-size: 24pt;
             color: #2f8d46;
-            text-align: center;
-        }
-  
-        p {
-            font-variant: italic;
-        }
+		text-align: center;
+}
     </style>
+		 <!-- Script from https://gist.github.com/simonbingham/2652757  -->
 	<script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap&v=weekly"
       type="text/javascript"></script>
@@ -32,12 +29,13 @@
     <h3>Kauai: Hawaii's Garden Island</h3>
     <!--The div element for the map -->
     <div id="map"></div>
-	  <script type= "text/javascript">
+	   <!-- Script from https://gist.github.com/simonbingham/2652757  -->
+	  <script type= "text/javascript"> 
     var locations = [
-       [ 'Hanalei Wildlife Refuge is home to many species of endangered waterfowl <img src="images/HawaiianBlackNeckedStilt.jpeg" alt="Hawaiian Black-Necked Stilt" style="float:right;width:1024px;height:768px;">', 22.1999637,-159.4694653 ]
-   ,[ 'Poipu Beach <img src="images/MonkSeal.jpeg" alt="Monk Seal" style="float:right;width:1024px;height:768px;">', 21.8731483,-159.455060 ]
-  ,[ 'Kilauea Lighthouse <img src="images/KilaueaLighthouse.jpeg" alt="Kilauea Lighthouse" style="float:right;width:768px;height:1024px;">',22.2316946,-159.4019598 ]
-  , [ 'Mount Waialeale <img src="images/Waialeale.jpeg" alt="Mount Waialeale" style="float:right;width:768px;height:1024px;">', 22.0706509,-159.5136368 ]
+       [ 'Hanalei Wildlife Refuge is home to many species of endangered waterfowl including the Hawaiian Gallinule, Hawaiian Coot, and the photogenic Hawaiian Black-Necked Stilt, seen below.' <img src="images/HawaiianBlackNeckedStilt.jpeg" alt="Hawaiian Black-Necked Stilt" style="float:right;width:1024px;height:768px;">', 22.1999637,-159.4694653 ]
+   ,[ 'Poipu Beach is a popular spot where you can often find an endangered Monk Seal taking a nap. Scroll down to see the one I found!' <img src="images/MonkSeal.jpeg" alt="Monk Seal" style="float:right;width:1024px;height:768px;">', 21.8731483,-159.455060 ]
+  ,[ 'Kilauea Lighthouse is a beautiful place to see the magnificent moli, also known as Laysan Albatross. I was fortunate to get a tour from none other than Hob Osterlund, founder of the <a href="http://www.albatrosskauai.org/wp/">Kauai Albatross Network</a> and author of the fascinating novel <a href="https://osupress.oregonstate.edu/book/holy-m%C5%8Dl%C4%AB">Holy Moli</a>.' <img src="images/KilaueaLighthouse.jpeg" alt="Kilauea Lighthouse" style="float:right;width:768px;height:1024px;">',22.2316946,-159.4019598 ]
+  , [ 'Mount Waialeale, one of the wettest spots on earth at an elevation of 5,148 feet' <img src="images/Waialeale.jpeg" alt="Mount Waialeale" style="float:right;width:768px;height:1024px;">', 22.0706509,-159.5136368 ]
     ];
     
     var map = new google.maps.Map(document.getElementById('map'), {
